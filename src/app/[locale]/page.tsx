@@ -143,7 +143,7 @@ const events = [
   },
 ];
 
-export default function HomePage({
+export default async function HomePage({
   params: { locale },
 }: {
   params: { locale: Locale };
@@ -283,7 +283,7 @@ export default function HomePage({
                       </div>
                     </div>
                     <div className="md:w-2/3">
-                      <p className="text-sm text-gray-500 mb-1">
+                      <p className="text-sm text-gray-500 mb-1" suppressHydrationWarning>
                         {formatDate(item.date)}
                       </p>
                       <h3 className="text-xl font-semibold mb-2 text-gray-900">
@@ -325,7 +325,7 @@ export default function HomePage({
                         <span className="text-3xl font-bold">
                           {new Date(item.date).getDate()}
                         </span>
-                        <span className="text-sm uppercase">
+                        <span className="text-sm uppercase" suppressHydrationWarning>
                           {new Intl.DateTimeFormat(locale === 'fr' ? 'fr-FR' : 'en-US', {
                             month: 'short',
                           }).format(new Date(item.date))}

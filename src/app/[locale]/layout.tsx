@@ -1,16 +1,14 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { locales } from '../../middleware';
-import '../../app/globals.css';
+import { Metadata } from 'next';
+import { Locale, locales } from '@/types';
+import { universityIdentity } from '@/config/university';
+import SkipToContent from '@/components/SkipToContent';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Locale } from '@/types';
-import { universityIdentity } from '@/config/university';
-
-const inter = Inter({ subsets: ['latin'] });
+import { geistSans, geistMono } from '../layout';
+import '../globals.css';
 
 export async function generateStaticParams() {
-  return locales.map(locale => ({ locale }));
+  return locales.map((locale: Locale) => ({ locale }));
 }
 
 export async function generateMetadata({
@@ -34,7 +32,7 @@ export async function generateMetadata({
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params: { locale },
 }: {
@@ -47,8 +45,8 @@ export default function RootLayout({
   }
 
   return (
-    <html lang={locale}>
-      <body className={inter.className}>
+    <html lang={locale} className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+      <body className={geistSans.className} suppressHydrationWarning>
         <div className="flex flex-col min-h-screen">
           <Header locale={locale as Locale} />
           <main className="flex-grow">{children}</main>

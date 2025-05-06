@@ -46,9 +46,9 @@ export function middleware(request: NextRequest) {
   return NextResponse.redirect(newUrl);
 }
 
+// Match all routes except for API routes, static files, etc.
 export const config = {
-  // Match all routes except for API routes, static files, etc.
   matcher: [
     '/((?!api|_next/static|_next/image|favicon.ico|images|.*\\.).*)',
   ],
-}; 
+};
