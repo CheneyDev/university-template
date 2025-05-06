@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# University Website Template
+
+A modern, responsive, and multilingual website template for universities built with Next.js. This template provides a solid foundation for creating a university website with support for English and French languages.
+
+## Features
+
+- **Multilingual Support**: Built-in support for English and French, easily extendable to other languages
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Configurable University Identity**: Easy customization of university name, logo, colors, and contact information
+- **Modern UI Components**: Header with navigation, footer, language switcher, and more
+- **SEO Optimized**: Metadata support for better search engine visibility
+- **Cloudflare Pages Ready**: Configuration file included for easy deployment
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18 or later
+- npm or yarn
+
+### Installation
+
+1. Clone this repository:
+```bash
+git clone https://github.com/yourusername/university-template.git
+cd university-template
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### University Identity
 
-## Learn More
+Update the university details in `src/config/university.ts`:
 
-To learn more about Next.js, take a look at the following resources:
+- University name (in different languages)
+- Logo URLs (replace the SVG files in `public/images/`)
+- University colors
+- Contact information
+- Social media links
+- Campus locations
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Navigation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Modify the navigation structure in `src/config/navigation.ts`:
 
-## Deploy on Vercel
+- Main navigation items
+- Footer navigation sections
+- Add or remove menu items as needed
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Content
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The content structure follows this pattern:
+
+- `src/app/[locale]/` - Contains all localized pages
+- `src/components/` - Reusable UI components
+- `src/config/` - Configuration files for customization
+- `src/types/` - TypeScript type definitions
+
+## Deployment
+
+### Cloudflare Pages
+
+This template includes a configuration file for Cloudflare Pages deployment:
+
+1. Push your code to a GitHub repository
+2. In your Cloudflare Pages dashboard, create a new project
+3. Connect your GitHub repository
+4. Use the following build settings:
+   - Build command: `npm run build`
+   - Build output directory: `.next`
+   - Node.js version: 18
+
+## License
+
+This template is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Next.js - The React framework used
+- Tailwind CSS - For styling
+- Unsplash - For demo images

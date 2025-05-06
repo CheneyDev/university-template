@@ -2,6 +2,19 @@
   "name": "university-template",
   "version": "0.1.0",
   "private": true,
+  "description": "A modern, multilingual university website template built with Next.js",
+  "author": "Your Name",
+  "license": "MIT",
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "university",
+    "website",
+    "template",
+    "multilingual"
+  ],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -23,5 +36,12 @@
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
     "@eslint/eslintrc": "^3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/university-template"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

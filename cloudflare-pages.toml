@@ -1,0 +1,27 @@
+# Configuration for Cloudflare Pages deployment
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Handle 404s and redirects
+[[redirects]]
+  from = "/*"
+  to = "/en/:splat"
+  status = 302
+  conditions = {Country = ["*"], Language = ["*"], Missing = ["true"]}
+
+# Set NODE_ENV to production when deployed
+[context.production.environment]
+  NODE_ENV = "production"
+
+# Define command for preview environments 
+[context.branch-deploy]
+  command = "npm run build"
+
+# Override for preview environment
+[context.preview.environment]
+  NODE_ENV = "development" 

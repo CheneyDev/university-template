@@ -1,0 +1,13 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- University shield -->
+  <path d="M50 5 L30 15 L30 50 L50 60 L70 50 L70 15 L50 5Z" fill="#003366" stroke="#FFD700" stroke-width="2"/>
+  
+  <!-- Book icon -->
+  <path d="M40 25 L60 25 L60 45 L40 45 Z" fill="#FFFFFF" stroke="#FFD700" stroke-width="1"/>
+  <path d="M40 25 L50 30 L60 25" stroke="#FFD700" stroke-width="1"/>
+  <path d="M50 30 L50 45" stroke="#FFD700" stroke-width="1"/>
+  
+  <!-- University name -->
+  <text x="80" y="30" font-family="Arial, sans-serif" font-weight="bold" font-size="14" fill="#003366">Global University</text>
+  <text x="80" y="45" font-family="Arial, sans-serif" font-size="10" fill="#003366">Est. 1950</text>
+</svg> 
